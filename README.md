@@ -43,14 +43,14 @@ Feel free to open a pull request to add new themes! :^)
 > If you have **v0.14.0** installed,
 > [clone the `fix/v0.14.0` branch](#clone-fix-branch) instead.
 
-2. A **terminal emulator** (default: Kitty)
+2. A **terminal emulator** (default: Foot)
 
 > [!IMPORTANT]
-> If you use a different emulator, replace all `kitty` commands accordingly. For
+> If you use a different emulator, replace all `foot -e` commands accordingly. For
 > example:
 >
 > ```diff
-> - "on-click": "kitty -e ..."
+> - "on-click": "foot -e ..."
 > + "on-click": "ghostty -e ..."
 > ```
 
@@ -128,34 +128,34 @@ You can define keybinds to interact with modules using their respective
 [scripts](./scripts/). For example:
 
 ```properties
-# ~/.config/hypr/hyprland.conf
+# ~/.config/sway/config
 
-$scripts = ~/.config/waybar/scripts
-$mod = Super
-$terminal = kitty
+set $scripts ~/.config/waybar/scripts
+set $mod Mod4
+set $terminal foot
 
 # Launch CLI
-bind = $mod, B, exec, $terminal -e $scripts/bluetooth
-bind = $mod, N, exec, $terminal -e $scripts/network
-bind = $mod, O, exec, $terminal -e $scripts/power
-bind = $mod, U, exec, $terminal -e $scripts/update
+bindsym $mod+b exec $terminal -e $scripts/bluetooth
+bindsym $mod+n exec $terminal -e $scripts/network
+bindsym $mod+o exec $terminal -e $scripts/power
+bindsym $mod+u exec $terminal -e $scripts/update
 
 # Toggle off Bluetooth/Wi-Fi
-bind = $mod Alt, B, exec, $scripts/bluetooth off
-bind = $mod Alt, N, exec, $scripts/network off
+bindsym $mod+Mod1+b exec $scripts/bluetooth off
+bindsym $mod+Mod1+n exec $scripts/network off
 
 # Refresh `custom/update` module
-bind = $mod Alt, U, exec, pkill -RTMIN+1 waybar
+bindsym $mod+Mod1+u exec pkill -RTMIN+1 waybar
 
 # Adjust volume
-bindl = , XF86AudioMicMute, exec, $scripts/volume input mute
-bindl = , XF86AudioMute, exec, $scripts/volume output mute
-bindel = , XF86AudioLowerVolume, exec, $scripts/volume output lower
-bindel = , XF86AudioRaiseVolume, exec, $scripts/volume output raise
+bindsym XF86AudioMicMute exec $scripts/volume input mute
+bindsym XF86AudioMute exec $scripts/volume output mute
+bindsym XF86AudioLowerVolume exec $scripts/volume output lower
+bindsym XF86AudioRaiseVolume exec $scripts/volume output raise
 
 # Adjust brightness
-bindel = , XF86MonBrightnessDown, exec, $scripts/backlight down
-bindel = , XF86MonBrightnessUp, exec, $scripts/backlight up
+bindsym XF86MonBrightnessDown exec $scripts/backlight down
+bindsym XF86MonBrightnessUp exec $scripts/backlight up
 ```
 
 #
@@ -200,6 +200,6 @@ cp themes/catppuccin-latte.css theme.css
 
 ### References
 
-- [Hyprland wiki: Binds ↗](https://wiki.hypr.land/Configuring/Binds/)
+- [Sway wiki: Keybindings ↗](https://github.com/swaywm/sway/wiki)
 - [Nerd Fonts wiki: Glyph Sets](https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points)
 - [Waybar wiki](https://github.com/Alexays/Waybar/wiki)

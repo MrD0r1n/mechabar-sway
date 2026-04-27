@@ -1,13 +1,15 @@
 {
-	"hyprland/window": {
+	"sway/window": {
 		"format": "{}",
 		"rewrite": {
 			"": "Desktop",
-			"kitty": "Terminal",
+			"foot": "Terminal",
 			"zsh": "Terminal",
 			"~": "Terminal"
 		},
 		// "separate-outputs":
+		// "offscreen-css":
+		// "offscreen-css-text":
 		// "icon":
 		// "icon-size":
 		// "min-length":

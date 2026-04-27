@@ -1,8 +1,6 @@
 {
-	"hyprland/language": {
-		// "format":
-		// "format-<lang>":
-		"format-en": " en"
+	"sway/language": {
+		"format": " {short}"
 		// "keyboard-name":
 		// "min-length":
 		// "max-length":
