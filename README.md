@@ -40,13 +40,12 @@ Feel free to open a pull request to add new themes! :^)
 1. **[Waybar](https://github.com/Alexays/Waybar)**
 
 > [!IMPORTANT]
-> If you have **v0.14.0** installed,
-> [clone the `fix/v0.14.0` branch](#clone-fix-branch) instead.
+> Best experience with **v0.15.0** or later (avoid v0.14.0 or check the official repo).
 
 2. A **terminal emulator** (default: Foot)
 
 > [!IMPORTANT]
-> If you use a different emulator, replace all `foot -e` commands accordingly. For
+> If you use a different emulator, replace all `foot` commands accordingly. For
 > example:
 >
 > ```diff
@@ -67,13 +66,7 @@ Feel free to open a pull request to add new themes! :^)
 2. Clone the repository:
 
 	```bash
-	git clone https://github.com/sejjy/mechabar.git ~/.config/waybar
-	```
-
-	<a name="clone-fix-branch">**For Waybar v0.14.0**</a>:
-
-	```bash
-	git clone -b fix/v0.14.0 https://github.com/sejjy/mechabar.git ~/.config/waybar
+	git clone https://github.com/MrD0r1n/mechabar-sway.git ~/.config/waybar
 	```
 
 3. Install the dependencies and restart Waybar:
